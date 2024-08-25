@@ -1,0 +1,176 @@
+@font-face {
+  font-family: "norsebold";
+  src: url("fonts/norse-bold-webfont.woff2") format("woff2"),
+    url("fonts/norse-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "abeezeeitalic";
+  src: url("/fonts/webfontkit-20240824-224624/abeezee-italic-webfont.woff2")
+      format("woff2"),
+    url("/fonts/webfontkit-20240824-224624/abeezee-italic-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "abeezeeregular";
+  src: url("fonts/webfontkit-20240824-224624/abeezee-regular-webfont.woff2")
+      format("woff2"),
+    url("fonts/webfontkit-20240824-224624/abeezee-regular-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+body {
+  height: 100vh;
+  font-size: 16px;
+  font-family: "abeezeeregular", "Courier New", Courier, monospace;
+}
+
+aside {
+  float: left;
+  width: 40%;
+  height: 100%;
+  background: url(background.jpg) no-repeat;
+  background-size: cover;
+}
+
+main {
+  float: left;
+  width: 60%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.quotes {
+  flex: 1;
+  font-size: 1.6rem;
+  font-weight: bold;
+  background: #f9fafb;
+}
+
+.quotes-text {
+  width: 80%;
+  position: relative;
+  left: 54px;
+  bottom: -130px;
+}
+
+.quotes p:first-of-type {
+  margin-bottom: 24px;
+}
+
+#sign-up-form {
+  position: relative;
+  padding: 16px 16px 16px 54px;
+  margin-top: 8px;
+  box-shadow: 0 10px 10px -10px gray;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+}
+
+.form-action {
+  background: #f9fafb;
+  padding-left: 54px;
+  flex: 1;
+  font-weight: bold;
+}
+
+.form-action button {
+  font-size: 1rem;
+  padding: 12px 54px;
+  background: #596d48;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  margin: 24px 0px;
+}
+
+h1 {
+  font-size: 4em;
+  background: url(odin-lined.png) no-repeat;
+  background-size: contain;
+  padding-left: 120px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-size: contain;
+  margin-top: 30%;
+  background-color: rgb(0 0 0 / 0.4);
+  padding: 8px 16px;
+  font-size: 1.6rem;
+  color: white;
+  font-family: norsebold;
+}
+
+.form-row {
+  width: 65%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.form-row > div {
+  display: flex;
+  flex-direction: column;
+}
+
+#sign-up-form input {
+  appearance: none;
+  outline: none;
+  width: 300px;
+
+  padding: 4px 8px;
+  font-size: 1rem;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+}
+
+#sign-up-form input:focus,
+#sign-up-form input:active {
+  border: 1px solid blue;
+  box-shadow: 3px 3px 3px #e5e7eb;
+}
+
+#sign-up-form label {
+  letter-spacing: 0.2rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #3f4246;
+}
+
+#sign-up-form input:invalid {
+  border: 1px solid red;
+}
+
+#sign-up-form input:invalid + span::before {
+  content: "*Password do not match";
+  font-size: 0.8rem;
+  color: red;
+}
+
+a {
+  text-decoration: none;
+  color: #596d48;
+}
